@@ -12,7 +12,7 @@ const creatDivs = (array, divPai) => {
     divPai.appendChild(newDiv);
     const spanMoeda = document.createElement('span');
     const spanValor = document.createElement('span');
-    spanMoeda.innerText = `${div[0]}`;
+    spanMoeda.innerHTML = `<img src="./src/img/Group.svg"> ${div[0]}`;
     spanValor.innerText = `${div[1]}`;
     spanValor.classList.add('dindin');
     newDiv.appendChild(spanMoeda);

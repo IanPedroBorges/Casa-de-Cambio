@@ -116,5 +116,9 @@ p {
 
 span {
     font-size: 16px;
+    color: white;
 }
 
+img {
+    width: 25%;
+}
