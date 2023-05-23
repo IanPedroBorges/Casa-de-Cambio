@@ -7,6 +7,9 @@
     <title>Casa de Cambio</title>
     <script src="./src/main.js" type="module" defer></script>
     <script src="sweetalert2.all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -14,8 +17,12 @@
             <h1>Casa de <strong>Câmbio</strong></h1>
             <nav>
                 <label for="moeda">Digite a moeda:</label>
-                <input type="text" name="moeda" id="moeda" value="USD">
-                <button type="button" id="btn-header">Pesquisar</button>
+                <div class="input-div">
+                        
+                        <input type="text" name="moeda" id="moeda" value="USD">
+                    
+                    <button type="button" id="btn-header">Pesquisar</button>
+                </div>
             </nav>
         </section>
     </header>
