@@ -5,7 +5,7 @@ const input = document.querySelector('#moeda');
 const btn = document.querySelector('#btn-header');
 const result = document.querySelector('#valores');
 
-const creatDivs = (array) => {
+const creatDivs = (array, divPai) => {
   array.forEach((div) => {
     const newDiv = document.createElement('div');
     newDiv.classList.add('valor');
@@ -25,7 +25,8 @@ const verifications = (rates) => {
   const divPai = document.createElement('div');
   divPai.classList.add('pai');
   result.appendChild(divPai);
-  const isReal = arrayRates.some((elemento) => elemento.includes(input.value));
+  const isReal = arrayRates
+    .some((elemento) => elemento.includes(input.value.toUpperCase()));
   if (!isReal) {
     return Swal.fire({
       icon: 'error',
@@ -36,7 +37,7 @@ const verifications = (rates) => {
   const newP = document.createElement('p');
   newP.innerText = `Valores referentes a 1 ${input.value}`;
   result.appendChild(newP);
-  creatDivs(arrayRates);
+  creatDivs(arrayRates, divPai);
 };
 
 const fetchMoedas = (api) => {
@@ -48,6 +49,8 @@ const fetchMoedas = (api) => {
 };
 
 btn.addEventListener('click', () => {
+  result.innerHTML = '';
+
   if (!input.value) {
     return Swal.fire({
       icon: 'error',
@@ -55,6 +58,7 @@ btn.addEventListener('click', () => {
       text: 'Você precisa passar uma moeda',
     });
   }
+
   const apiMoeda = `https://api.exchangerate.host/latest?base=${input.value}`;
   fetchMoedas(apiMoeda);
 });

@@ -3,3 +3,118 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    font-family: 'Fira Code', monospace;
+    background-image: url('./img/Group 2.svg');
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    background-color: rgba(255, 255, 255, 0.06);
+    min-width: 100%;
+    height: 75vh;
+    padding: 40px;
+    border-radius: 30px;
+    overflow-x: scroll;
+}
+header {
+    width: 80vw;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    padding: 20px;
+    flex-flow: column;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    font-weight: 700;
+}
+
+strong {
+    color: rgb(255, 75, 105);
+    text-shadow: 0 0 20px rgb(255, 152, 152);
+}
+
+label {
+    font-size: 12px;
+    line-height: 21px;
+    color: white;
+}
+
+input, button {
+    padding: 10px 5px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(100%/2 - 2%);
+    
+    color: white;
+    font-size: 20px;
+}
+
+input {
+    background-color: #D9D9D91A;
+    
+}
+
+button {
+    background-color: #96EB95;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.input-div {
+    display: flex;
+    justify-content: space-between;
+}
+.pai {
+    display: flex;
+    flex-flow: row wrap;
+    width: 75vw;
+    justify-content: center;
+}
+
+.dindin {
+    color:rgb(138, 27, 101);
+    font-size: 14px;
+}
+
+.valor {
+    padding: 10px 5px;
+    margin: 10px;
+    background-color: gray;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+span {
+    font-size: 16px;
+}
+
